@@ -7,17 +7,42 @@ import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 
 
-const defaultTodos = [
-    { text: 'Tomar agua', completed: false},
-    { text: 'Leer', completed: true},
-    { text: 'Entrenar', completed: false},
-    { text: 'Limpiar', completed: false},
-    { text: 'Usar estados devrivados', completed: true}
-];
+// const defaultTodos = [
+//     { text: 'Tomar agua', completed: false},
+//     { text: 'Leer', completed: true},
+//     { text: 'Entrenar', completed: false},
+//     { text: 'Limpiar', completed: false},
+//     { text: 'Usar estados devrivados', completed: true}
+// ];
+
+// localStorage.setItem('ToDo&ToDo_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem('ToDo&ToDo_V1');
+
+function useLocalStorage(itemName, initialValue) {
+ 
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItem;
+
+  if(!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
+  } else {
+    parsedItem = JSON.parse(localStorageItem);
+  };
+
+  const [item,setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName , JSON.stringify(newItem));
+    setItem(newItem);
+  };
+
+  return [item,saveItem];
+};
 
 function App() {
 
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('ToDo&ToDo_V1', []);
 
   const [searchValue, setSearchValue] = React.useState ('');
 
@@ -43,7 +68,7 @@ const completeTodo = (text) =>{
     (todo) => todo.text == text
   );   
   newTodos[todoIndex].completed = true;
-  setTodos(newTodos);
+  saveTodos(newTodos);
 };
 
 const deleteTodo = (text) =>{
@@ -52,7 +77,7 @@ const deleteTodo = (text) =>{
     (todo) => todo.text == text
   );   
   newTodos.splice(todoIndex,1);
-  setTodos(newTodos);
+  saveTodos(newTodos);
 };
 
 
