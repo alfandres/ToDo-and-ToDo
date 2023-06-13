@@ -30,10 +30,10 @@ function useLocalStorage(itemName, initialValue) {
   
     
   
-    const saveItem = (newItem) => {
-      localStorage.setItem(itemName , JSON.stringify(newItem));
-      setItem(newItem);
-    };
+    function saveItem(newItem) {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  }
   
     return {
       item,
