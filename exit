@@ -1,0 +1,53 @@
+[33mcommit ec2db12fc70ada6d7da8ec769ae29f3d17476bae[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Thu Jun 15 10:44:45 2023 -0500
+
+    se implemento el modal(el portal) y el useContext
+
+[33mcommit 15d4e480737d4df5f43e265c0f5ef79a224c37d8[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Tue Jun 13 10:15:42 2023 -0500
+
+    se agrgo react contex y useContex
+
+[33mcommit 4cb59cdff825c18cdce72c8402aa920329603fac[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Fri Jun 9 20:30:36 2023 -0500
+
+    se implemento el loading
+
+[33mcommit 9bc8e4bc81d99a6ee311ebca5b29da0d00b8ee77[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Thu Jun 8 21:38:52 2023 -0500
+
+    Se organizo los arcchivos en carpetas y se implemento el useEffect
+
+[33mcommit 53cc3782d31cb06c187ae3e87484971960e91a3b[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Wed Jun 7 18:31:54 2023 -0500
+
+    se agrego el localStorage y se le hizo su custom hooks
+
+[33mcommit 7e8345ce50f898c67e012e5d77388cbd6a3cd22f[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Tue Jun 6 19:11:07 2023 -0500
+
+    Estado dinamico completado y se agrego los svg icon
+
+[33mcommit e49cafba16f6bfe3e0b39c2bf7eafa190bf16754[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Tue Jun 6 15:49:45 2023 -0500
+
+    se puso el estado derivado para validar y borrar ToDos
+
+[33mcommit 3ea076045e7691923656f0f075206e789f76e3d7[m
+Author: Andres Parra <alfandres2108@gmail.com>
+Date:   Tue Jun 6 09:16:16 2023 -0500
+
+    Primer commit, ToDo en estado de busquedas de todos
+
+[33mcommit c739483cd98ed009ddabd58a9f9bcbe34fda8de8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Juan David Castro <me@juandc.co>
+Date:   Wed Nov 9 10:41:44 2022 -0500
+
+    Estructura base lista para empezar el curso
