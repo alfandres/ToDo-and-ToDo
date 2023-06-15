@@ -1,3 +1,4 @@
+import React from 'react';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
@@ -8,44 +9,56 @@ import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 
 import { CreateTodoButton } from '../CreateTodoButton';
+import { TodoFrom } from '../ToddFrom';
 
+import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
 
 function AppUI () {
-    return(
+
+  const {
+    loading,
+    error,
+    searchTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+  } = React.useContext( TodoContext );
+
+    return (
     <>
       <TodoCounter/>
-
       <TodoSearch/>
-      <TodoContext.Consumer>
-        {({
-          loading,
-          error,
-          searchTodos,
-          completeTodo,
-          deleteTodo,
-        }) => (
-          <TodoList>
-          {loading && <TodosLoading/>}
-          {error && <TodosError/>}
-          {(!loading && searchTodos.length === 0) && <EmptyTodos/>}
+      
+        <TodoList>
+        {loading && <TodosLoading/>}
+        {error && <TodosError/>}
+        {(!loading && searchTodos.length === 0) && <EmptyTodos/>}
   
-          {searchTodos.map( todo => (
-              <TodoItem 
-              key = {todo.text} 
-              text = {todo.text}
-              completed = {todo.completed} 
-              onComplete = {() => completeTodo(todo.text)}
-              onDelete = {() => deleteTodo(todo.text)}
-              />
-          ))}
-          </TodoList>
-        )}
-      </TodoContext.Consumer>
+        {searchTodos.map( todo => (
+            <TodoItem 
+            key = {todo.text} 
+            text = {todo.text}
+            completed = {todo.completed} 
+            onComplete = {() => completeTodo(todo.text)}
+            onDelete = {() => deleteTodo(todo.text)}
+            />
+        ))}
+        </TodoList>
+      
+      <CreateTodoButton
+        setOpenModal={ setOpenModal }
+      />
 
-      <CreateTodoButton/>
+      {openModal && (
+        <Modal>
+          <TodoFrom/>
+        </Modal>
+      )}
+      
     </>
     );
-    };
+  }
 
 export { AppUI };
