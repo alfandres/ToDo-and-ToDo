@@ -24,7 +24,7 @@ label{
 textarea{
     background-color: #F9FBFC;
     border: 2px solid #202329;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
     color: #1E1E1F;
     font-size: 20px;
@@ -65,6 +65,7 @@ textarea:focus {
     border: none;
     border-radius: var(--button_radius);
     background: var(--button_outline_color);
+    cursor: pointer;
 }
 
 .button_top {
