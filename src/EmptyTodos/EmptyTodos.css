@@ -1,0 +1,14 @@
+Empty-Todos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size:large;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size:medium;
+}

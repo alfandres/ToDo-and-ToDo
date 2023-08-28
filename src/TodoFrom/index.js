@@ -2,7 +2,7 @@ import React from "react";
 import './TodoFrom.css';
 
 
-function TodoFrom(addTodo, setOpenModal){
+function TodoFrom({addTodo, setOpenModal}){
 
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
@@ -33,13 +33,13 @@ function TodoFrom(addTodo, setOpenModal){
                 type="button"
                 onClick={onCancel}
                 className="TodoFrom-button ">
-                    <span className="button_top TodoFrom-button--cancel"> Cancelar</span>
+                    <span className="button_top TodoFrom-button--cancel">Cancelar</span>
             </button>
 
             <button 
                 type="submit"
                 className="TodoFrom-button">
-                    <span className="button_top TodoFrom-button--add"> Añadir</span>
+                    <span className="button_top TodoFrom-button--add">Añadir</span>
             </button>
             </div>
         </form>
