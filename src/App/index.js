@@ -19,6 +19,7 @@ import { TodoFrom } from '../TodoFrom';
 import { Modal } from '../Modal';
 
 
+
 function App() {
 
   const {
@@ -33,12 +34,13 @@ function App() {
     completedTodos,
     searchValue,
     setSearchValue,
-    addTodo
+    addTodo,
+    sincronizeTodos
   } = useTodos();
 
   return ( 
     <React.Fragment>
-      <TodoHeader loading={loading} >
+      <TodoHeader loading={loading}>
         <TodoCounter 
           totalTodos={totalTodos}
           completedTodos={completedTodos}
@@ -102,6 +104,7 @@ function App() {
       </TodoList>  */}
       
       <CreateTodoButton
+        loading={loading}
         setOpenModal={setOpenModal}
       />
 

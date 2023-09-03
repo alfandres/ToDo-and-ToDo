@@ -24,22 +24,22 @@ function TodoFrom({addTodo, setOpenModal}){
         <form onSubmit = {onSubmit} >
             <label>Escribe tu nuevo ToDo</label>
             <textarea 
-                placeholder="Comprar frutas"
+                placeholder='Comprar frutas'
                 value={newTodoValue}
                 onChange={onChange}
             />
-            <div className="TodoFrom-buttonContainer">
+            <div className='TodoFrom-buttonContainer'>
             <button 
-                type="button"
+                type='button'
                 onClick={onCancel}
-                className="TodoFrom-button ">
-                    <span className="button_top TodoFrom-button--cancel">Cancelar</span>
+                className='TodoFrom-button'>
+                    <span className='button_top TodoFrom-button--cancel'>Cancelar</span>
             </button>
 
             <button 
-                type="submit"
-                className="TodoFrom-button">
-                    <span className="button_top TodoFrom-button--add">Añadir</span>
+                type='submit'
+                className='TodoFrom-button'>
+                    <span className='button_top TodoFrom-button--add'>Añadir</span>
             </button>
             </div>
         </form>

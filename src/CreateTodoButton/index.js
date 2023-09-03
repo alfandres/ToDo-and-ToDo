@@ -1,9 +1,9 @@
 import './CreateTodoButton.css';
 
-function CreateTodoButton( { setOpenModal } ){
+function CreateTodoButton( { setOpenModal, loading } ){
 
     return(
-      <button className="CreateTodoButton" 
+      <button className={`CreateTodoButton ${!!loading && "CreateTodoButton---loading"}`}
       onClick={
         () => {
           setOpenModal( state => !state);

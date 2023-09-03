@@ -24,5 +24,10 @@
   .CreateTodoButton:hover {
     transform: rotate(224deg);
   }
+
+  .CreateTodoButton---loading{
+    opacity: 25%;
+    pointer-events:none;
+  }
   
   

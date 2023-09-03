@@ -7,6 +7,7 @@ function useTodos (){
     const {
         item: todos, 
         saveItem: saveTodos,
+        sincronizeItem: sincronizeTodos,
         loading,
         error,
       } = useLocalStorage('ToDo&ToDo_V1', []);
@@ -50,8 +51,12 @@ function useTodos (){
       const newTodos = [...todos];
       const todoIndex = newTodos.findIndex(
         (todo) => todo.text === text
-      );   
-      newTodos[todoIndex].completed = true;
+      );
+      if(newTodos[todoIndex].completed === true) {
+        newTodos[todoIndex].completed = false;
+      }else {
+        newTodos[todoIndex].completed = true;
+      }
       saveTodos(newTodos);
     };
     
@@ -77,6 +82,7 @@ function useTodos (){
           openModal,
           setOpenModal,
           addTodo,
+          sincronizeTodos
         }
      );
 }
