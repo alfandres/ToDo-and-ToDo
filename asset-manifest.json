@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ToDo-and-ToDo/static/css/main.2adbf3fd.css",
-    "main.js": "/ToDo-and-ToDo/static/js/main.28fb2d84.js",
+    "main.css": "/ToDo-and-ToDo/static/css/main.d07b7922.css",
+    "main.js": "/ToDo-and-ToDo/static/js/main.b971e77a.js",
     "index.html": "/ToDo-and-ToDo/index.html",
     "static/media/delete.svg": "/ToDo-and-ToDo/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
     "static/media/check.svg": "/ToDo-and-ToDo/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
-    "main.2adbf3fd.css.map": "/ToDo-and-ToDo/static/css/main.2adbf3fd.css.map",
-    "main.28fb2d84.js.map": "/ToDo-and-ToDo/static/js/main.28fb2d84.js.map"
+    "main.d07b7922.css.map": "/ToDo-and-ToDo/static/css/main.d07b7922.css.map",
+    "main.b971e77a.js.map": "/ToDo-and-ToDo/static/js/main.b971e77a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2adbf3fd.css",
-    "static/js/main.28fb2d84.js"
+    "static/css/main.d07b7922.css",
+    "static/js/main.b971e77a.js"
   ]
 }
